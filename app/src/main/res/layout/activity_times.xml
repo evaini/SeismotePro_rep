@@ -1,0 +1,818 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="diana.seismote.ActivityTimes">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Change Intervals"
+        android:id="@+id/textView_infochangeintervals"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_infochangeintervals"
+        android:id="@+id/lin_lay_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:ems="8"
+            android:id="@+id/textView_color" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:id="@+id/editText_color1"
+            android:layout_weight="1"
+            android:background="#8cff0000"
+            android:text="TOO LOW"
+            android:gravity="center"
+            android:autoText="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:id="@+id/editText_color2"
+            android:layout_weight="1"
+            android:background="#8cffee00" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:id="@+id/editText_color3"
+            android:layout_weight="1"
+            android:background="#8c00ff00"
+            android:text="GOOD"
+            android:gravity="center" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:id="@+id/editText_color4"
+            android:layout_weight="1"
+            android:background="#8cffee00" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:id="@+id/editText_color5"
+            android:layout_weight="1"
+            android:background="#8cff0000"
+            android:text="TOO HIGH"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin_lay_horizontal"
+        android:layout_above="@+id/button_ok_goback"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lin_lay_vertical">
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PEP"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_1"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_1_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_1_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake1"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_1_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_1_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ICT"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_2"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_2_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_2_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake2"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_2_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_2_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="LVET"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_3_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_3_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake3"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_3_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_3_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="IRT"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_4"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_4_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_4_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake4"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_4_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_4_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PTT"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_5"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_5_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_5_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake5"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_5_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_5_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PAT"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_6"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_6_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_6_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake6"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_6_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_6_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="PR"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_7"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_7_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_7_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake7"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_7_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_7_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="QT"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_8"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_8_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_8_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake8"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_8_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_8_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="QRS"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_9"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_9_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_9_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake9"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_9_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_9_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="STI"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_10"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_10_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_10_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake10"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_10_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_10_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="TEI"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_11"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_11_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_11_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake11"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_11_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_11_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="QTC"
+                android:ems="8"
+                android:id="@+id/textView_changeintervals_12"
+                android:layout_alignLeft="@+id/textView_changeintervals_3"
+                android:layout_alignRight="@+id/textView_changeintervals_3"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_12_1"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_12_2"
+                android:layout_weight="1"
+                android:gravity="right" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:ems="10"
+                android:id="@+id/editText_fake12"
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_12_3"
+                android:layout_weight="1"
+                android:gravity="left" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText_changeintervals_12_4"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </TableRow>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_alignParentBottom="true"
+        android:text="OK"
+        android:textSize="30sp"
+        android:id="@+id/button_ok_goback"
+        android:onClick="ReturnToAnalysis_AndGetNewTimes" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SEISMOTE PRO</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_1">Acquire</string>
+    <string name="title_activity_2">Analyze</string>
+    <string name="title_activity_3">Send</string>
+    <string name="title_activity_bt">Connect to...</string>
+    <string name="title_activity_activity_settings">ActivitySettings</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_activity_activity_analysis">ActivityAnalysis</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_floating">FloatingActivity</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+
+    <string name="title_activity_activity_times">ActivityTimes</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="diana.com.seismotepro">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--    COMMENTATO IL 30 06 2016    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- COMMENTATO IL 30 06 2016
+        <receiver
+            android:name=".BootCompletedIntentReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".AutoStartUp" />-->
+
+        <activity
+            android:name=".Activity0"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_1"
+            android:parentActivityName=".Activity0"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="diana.com.seismotepro.Activity0" />
+        </activity>
+        <activity
+            android:name=".Activity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_2"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="diana.com.seismotepro.ActivityAnalysis" />
+        </activity>
+        <activity
+            android:name=".Activity3"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_3"
+            android:parentActivityName=".Activity0"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="diana.com.seismotepro.Activity0" />
+        </activity>
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+
+                <!-- PER DROPBOX: Change this to be db- followed by your app key -->
+                <data android:scheme="db-66fw7hvtn9n2awp" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- PER DROPBOX -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivitySettings"
+            android:label="@string/title_activity_activity_settings"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityAnalysis"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_activity_analysis"
+            android:parentActivityName=".Activity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".ActivityTimes"
+            android:label="@string/title_activity_activity_times"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,650 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="diana.seismote.ActivityAnalysis"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:hint="default file name"
+        android:autoText="false"
+        android:gravity="center_horizontal|bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="BACK"
+        android:id="@+id/button_backtopreviousphase"
+        android:layout_below="@+id/button_starttime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="BackButtonPressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND DATA"
+        android:id="@+id/button_fromanalysistotransfer"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:layout_below="@+id/button_backtopreviousphase"
+        android:onClick="GoToSendDataActivity" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="←→"
+        android:id="@+id/button_enlarge_mean"
+        android:layout_below="@+id/button_fromanalysistotransfer"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:onClick="EnlargeMeanSignal"
+        android:textSize="25sp"
+        android:gravity="center_horizontal|top"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD MARKER"
+        android:id="@+id/button_add_marker"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_enlarge_mean"
+        android:onClick="AddMrkBttn_Click"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REMOVE\nMARKERS"
+        android:id="@+id/button_rmv_marker"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button_add_marker"
+        android:onClick="RmvMrkBttn_Click"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="SETTINGS"
+        android:id="@+id/button_gotochangetimes"
+        android:layout_above="@+id/button_fromanalysistohome"
+        android:onClick="GoToChangeTimes" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="default signals"
+        android:id="@+id/textView_defaultsignals"
+        android:layout_above="@+id/progressBar_readfile"
+        android:layout_alignLeft="@+id/progressBar_readfile"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="70sp"
+        android:text="CHANGE FILE"
+        android:id="@+id/button_setanalysis"
+        android:onClick="GoToAnalysisSettings"
+
+        android:layout_alignTop="@+id/textView_defaultsignals"
+        android:layout_toRightOf="@+id/textView_defaultsignals"
+        android:textSize="23sp" />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="70sp"
+        android:text="CHANGE\nSIGNALS"
+        android:id="@+id/button_changedefaults"
+        android:layout_alignBottom="@+id/textView_defaultsignals"
+        android:layout_toRightOf="@+id/textView_defaultsignals"
+        android:onClick="GoToChangeDefaultsActivity"
+        android:textSize="23sp" />
+
+    <Button
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:text="READ FILE"
+        android:id="@+id/button_readfile"
+
+        android:layout_below="@+id/button_changedefaults"
+        android:layout_centerHorizontal="true"
+
+        android:onClick="DecodeFile"
+        android:textStyle="bold"
+        android:textSize="27sp" />
+
+    <Button
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:text="VIEW ANALYSIS"
+        android:id="@+id/button_viewlastanalysis"
+
+        android:layout_below="@+id/button_readfile"
+        android:layout_centerHorizontal="true"
+
+        android:onClick="ViewLastAnalysis"
+        android:textStyle="bold"
+        android:textSize="27sp" />
+
+
+
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="GRAPH IT"
+        android:id="@+id/button_dograph"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="GraphSignals" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:text="SEGMENTATION"
+        android:id="@+id/button_doanalysis"
+        android:onClick="StartAnalyzeEcg"
+        android:layout_below="@+id/button_dograph"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="AVERAGING"
+        android:id="@+id/button_mean"
+        android:onClick="SegmentAndMediate"
+        android:layout_below="@+id/button_doanalysis"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="ZOOM IN"
+        android:id="@+id/button_fit"
+        android:onClick="FitDataInBox"
+        android:layout_below="@+id/button_mean"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignLeft="@+id/button_doanalysis"
+        android:layout_alignRight="@+id/button_doanalysis"
+        android:text="ZOOM OUT"
+        android:id="@+id/button_reset_view"
+        android:layout_below="@+id/button_fit"
+        android:layout_alignParentLeft="true"
+        android:onClick="ResetView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:text="GET INTERVALS"
+        android:id="@+id/button_starttime"
+        android:layout_below="@+id/button_reset_view"
+        android:layout_alignParentLeft="true"
+        android:onClick="EnableTimeTasks" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:id="@+id/button_fromanalysistohome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="ActAnalysis_BackToActivity0" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_name"
+        android:layout_above="@+id/button_fromanalysistohome"
+        android:layout_toRightOf="@+id/button_starttime"
+        android:layout_toLeftOf="@+id/linearLayout1"
+        android:id="@+id/frame_layout">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_readfile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/frame_layout1"></FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_layout1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/frame_layout2"></FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_layout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/frame_layout3"></FrameLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:text=""
+        android:id="@+id/button_errors"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="ResetPacketErrors"/>
+
+
+
+
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/linearLayout1"
+        android:layout_below="@+id/textView_analysis_phase"
+        android:layout_above="@+id/textView_time_live"
+        android:id="@+id/rel_Layout">
+
+        <TextView
+            android:layout_width="90sp"
+            android:layout_height="80sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/textView_teiindex"
+            android:layout_alignRight="@+id/textView_teiindex"
+            android:hint=""
+            android:gravity="center"
+            android:id="@+id/textView_hidden1" />
+
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignLeft="@+id/textView_teiindex"
+                android:layout_alignRight="@+id/textView_teiindex"
+                android:layout_below="@+id/textView_hidden1"
+                android:hint="STI RATIO"
+                android:gravity="center"
+                android:id="@+id/textView_stiratio" />
+
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="TEI INDEX"
+                android:layout_below="@+id/textView_stiratio"
+                android:gravity="center"
+                android:id="@+id/textView_teiindex" />
+
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_above="@+id/textView_hidden2"
+                android:layout_alignLeft="@+id/textView_teiindex"
+                android:layout_alignRight="@+id/textView_teiindex"
+                android:hint="QTC"
+                android:gravity="center"
+                android:id="@+id/textView_qtc" />
+
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="80sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/textView_teiindex"
+                android:layout_alignRight="@+id/textView_teiindex"
+                android:hint=""
+                android:gravity="center"
+                android:id="@+id/textView_hidden2" />
+    </RelativeLayout>
+   <!-- <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/linearLayout1"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="STI RATIO"
+                android:gravity="center"
+                android:id="@+id/textView_stiratio" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="TEI INDEX"
+                android:gravity="center"
+                android:id="@+id/textView_teiindex" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="QTC"
+                android:gravity="center"
+                android:id="@+id/textView_qtc" />
+        </TableRow>
+
+        </LinearLayout>-->
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="HeartRate"
+                android:id="@+id/textView_heartrate" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="PEP"
+                android:id="@+id/button_pep"
+                android:onClick="PEP_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="PEP"
+                android:id="@+id/textView_pep" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="ICT"
+                android:id="@+id/button_ict"
+                android:onClick="ICT_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="ICT"
+                android:id="@+id/textView_ict" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="LVET"
+                android:id="@+id/button_lvet"
+                android:onClick="LVET_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="LVET"
+                android:id="@+id/textView_lvet" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="IRT"
+                android:id="@+id/button_irt"
+                android:onClick="IRT_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="IRT"
+                android:id="@+id/textView_irt" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="17sp"
+                android:text=""
+                android:id="@+id/button_hidden1"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="PTT"
+                android:id="@+id/button_ptt"
+                android:onClick="PTT_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="PTT"
+                android:id="@+id/textView_ptt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="PAT"
+                android:id="@+id/button_pat"
+                android:onClick="PAT_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="PAT"
+                android:id="@+id/textView_pat" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="17sp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/button_hidden2"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="QTC"
+                android:id="@+id/button_qtc"
+                android:onClick="QTC_button_pressed" />-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="PR"
+                android:id="@+id/button_pq"
+                android:onClick="PR_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="PR"
+                android:id="@+id/textView_pq" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="QT"
+                android:id="@+id/button_qt"
+                android:onClick="QT_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="QT"
+                android:id="@+id/textView_qt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="QRS"
+                android:id="@+id/button_qrs"
+                android:onClick="QRS_button_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="QRS"
+                android:id="@+id/textView_qrs" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="17sp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/button_hidden3"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55sp"
+                android:text="SAVE DATA"
+                android:id="@+id/button_savedata"
+                android:onClick="SaveData" />
+        </TableRow>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_time_live"
+        android:gravity="center"
+        android:hint="time_ms"
+        android:layout_below="@+id/frame_layout"
+        android:layout_toLeftOf="@+id/linearLayout1" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_analysis_phase"
+        android:layout_above="@+id/frame_layout"
+        android:layout_centerHorizontal="true"
+        android:hint="phase"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar_readfile"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:hint="hints"
+        android:id="@+id/textView_hints" />
+
+
+
+
+</RelativeLayout>

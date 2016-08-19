@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="diana.seismote.Activity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_filename_1"
+        android:hint="Default file name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="137dp"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose another file"
+        android:id="@+id/button_choose"
+        android:onClick="ChooseAnotherFile"
+        android:layout_below="@+id/textView_filename_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="100sp"
+        android:text="BACK \n TO ANALISYS"
+        android:id="@+id/button_gotoanalisys"
+        android:textSize="20sp"
+        android:onClick="GoToAnalisys"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView_filename_1"
+        android:layout_toEndOf="@+id/textView_filename_1"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

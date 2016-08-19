@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Activity0"
+
+    >
+    <!--android:background="@drawable/logo" da rimettere ne tag del relative layout -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LogoView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.4"
+        android:text="ACQUISITION"
+        android:id="@+id/goto_act1_button"
+        android:onClick="GoToActivity1"
+        android:layout_gravity="center"
+        android:layout_marginTop="130sp"
+        android:textSize="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button1_style"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.4"
+        android:text="ANALYSIS"
+        android:id="@+id/goto_act2_button"
+        android:onClick="GoToActivity2"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/exit_button"
+        android:layout_alignEnd="@+id/exit_button"
+        android:background="@drawable/button1_style"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.4"
+        android:text="FILE TRANSFER"
+        android:id="@+id/goto_act3_button"
+        android:onClick="GoToActivity3"
+        android:textSize="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="525sp"
+        android:background="@drawable/button1_style"
+        android:textColor="#FFFFFF"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="EXIT"
+        android:id="@+id/exit_button"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="670sp"
+        android:onClick="ExitFromApp"
+        android:textSize="25dp"
+        android:background="@drawable/button1_style"
+        android:textColor="#FFFFFF" />
+
+
+
+</RelativeLayout>
